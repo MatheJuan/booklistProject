@@ -3,10 +3,17 @@ package com.devlpjruan.booklist.entities;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="tb_booklist")
 public class BookList {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	
@@ -14,6 +21,7 @@ public class BookList {
 	public BookList() {
 		
 	}
+	
 	public BookList(Long id, String nome) {
 		super();
 		this.id = id;

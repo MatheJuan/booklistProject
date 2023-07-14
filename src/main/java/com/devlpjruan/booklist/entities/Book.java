@@ -21,7 +21,7 @@ public class Book {
 	@Column(name = "book_year")
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String author;
 	private Double score;
 	private String imgUrl;
 	@Column(columnDefinition = "TEXT")
@@ -31,14 +31,16 @@ public class Book {
 	
 	
 	
-	public Book(Long id, String title, int year, String genre, String platform, Double score, String imgUrl,
+	public Book() {
+	}
+	public Book(Long id, String title, int year, String genre, String author, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
+		this.author = author;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -69,10 +71,10 @@ public class Book {
 		this.genre = genre;
 	}
 	public String getPlatform() {
-		return platform;
+		return author;
 	}
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setPlatform(String author) {
+		this.author = author;
 	}
 	public Double getScore() {
 		return score;
