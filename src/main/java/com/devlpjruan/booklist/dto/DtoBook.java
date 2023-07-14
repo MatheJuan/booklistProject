@@ -1,6 +1,7 @@
 package com.devlpjruan.booklist.dto;
 
 import com.devlpjruan.booklist.entities.Book;
+import com.devlpjruan.booklist.projection.DtoBookprojection;
 
 public class DtoBook {
 	
@@ -21,7 +22,14 @@ public class DtoBook {
 		this.imgUrl = book.getImgUrl();
 		this.shortDescription = book.getShortDescription();
 	}
-
+public DtoBook(DtoBookprojection entity) {
+		
+		this.id = entity.getId();
+		this.title = entity.getTitle();
+		this.year = entity.getYear();
+		this.imgUrl = entity.getImgurl();
+		this.shortDescription = entity.getShortDescription();
+	}
 	public Long getId() {
 		return id;
 	}
