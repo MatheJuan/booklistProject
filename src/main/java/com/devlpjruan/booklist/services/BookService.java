@@ -9,11 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.devlpjruan.booklist.dto.DataTransferBook;
 import com.devlpjruan.booklist.dto.DtoBook;
-import com.devlpjruan.booklist.dto.DtoBookList;
 import com.devlpjruan.booklist.entities.Book;
-import com.devlpjruan.booklist.entities.BookList;
 import com.devlpjruan.booklist.projection.DtoBookprojection;
-import com.devlpjruan.booklist.repository.BooklistRepository;
 import com.devlpjruan.booklist.repository.Bookrepository;
 
 @Service
